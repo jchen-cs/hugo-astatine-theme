@@ -30,18 +30,34 @@
         <h2 itemprop="jobTitle" class="text-xl my-0 border-none">{{ .Params.Personal_title }}</h2>
             {{range .Params.Address }}
             <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-            <span itemprop="streetAddress">
+           <!-- <span itemprop="streetAddress">
                 {{ .name }}
                 <br>
                 {{ .street }}
             </span>
             <br>
-            {{ with .postal_code }}<span itemprop="postalCode">{{ . }}</span>{{ end }}
+			{{ with .postal_code }}<span itemprop="postalCode">{{ . }}</span>{{ end }}i-->
             {{ with .locality }}<span itemprop="addressLocality">{{ . }}</span>{{ end }}
-            <br>
-            {{ with .email }}
-            <a href="mailto:{{ . }}">{{ . }}</a>
+			<br><br>
+            {{ with .email }}<!--<a href="mailto:{{ . }}">{{ . }}</a>-->
+			{{ . }}
             {{ end }}
+			{{ with .twitter }}
+			<br>
+			Twitter: <a href="https://www.twitter.com/{{ . }}">@{{ . }}</a>
+			{{ end }}
+			{{ with .github }}
+			<br>
+			GitHub: <a href="https://www.github.com/{{ . }}">{{ . }}</a>
+			{{ end }}
+			{{ with .googlescholar }}
+			<br>
+			<a href="{{ . }}">Google Scholar</a>
+			{{ end }}
+			{{ with .linkedin }}
+			<br>
+			<a href="{{ . }}">LinkedIn</a>
+			{{ end }}
             {{ with .emailimg }}
             <picture>
                 {{ if .dark }}

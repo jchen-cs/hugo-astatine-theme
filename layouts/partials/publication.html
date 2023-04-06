@@ -5,7 +5,8 @@
     <div class="pub-image basis-40 grow-0 shrink" itemprop="image"
 
          itemscope itemtype="http://schema.org/ImageObject">
-        <img alt="{{ .title }} paper illustration"
+		<!-- crop images to 4:3 -->
+        <img style="aspect-ratio:4/3; object-fit:cover" alt="{{ .title }} paper illustration"
              itemprop="url" src="{{ .image }}"
              class="w-full"/>
     </div>

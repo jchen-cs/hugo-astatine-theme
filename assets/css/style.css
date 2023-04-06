@@ -463,7 +463,8 @@ h4 {
 }
 
 p,  ul,  ol {
-  margin-top: 1rem;
+  /* Adjusting gap between lists and paragraphs. Changed margin-top to 0 from 1rem */
+  margin-top: 0;
   margin-bottom: 2rem;
 }
 
