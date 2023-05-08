@@ -58,6 +58,10 @@
 			<br>
 			<a href="{{ . }}">LinkedIn</a>
 			{{ end }}
+			{{ with .cv }}
+			<br>
+			<a href="{{ . }}">CV</a>
+			{{ end }}
             {{ with .emailimg }}
             <picture>
                 {{ if .dark }}
