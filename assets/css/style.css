@@ -1191,6 +1191,10 @@ blockquote p {
   max-width: 100%;
 }
 
+.max-w-half{
+  max-width: 50%;
+}
+
 .flex-initial {
   flex: 0 1 auto;
 }
